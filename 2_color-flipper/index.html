@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <title>Color Flipper</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <script src="main.js"></script>
+<body>
+    <header id="nav-bar">
+        <p><b>Color Flipper</b></p>
+        <div id="types">
+            <p onclick="changeS()">Simple</p>
+            <p onclick="changeHEX()">Hex</p>
+            <p onclick="changeRGB()">RGB</p>
+            <p onclick="changeHSL()">HSL</p>
+        </div>    
+    </header>
+    <main id="color-changer">
+        <div id="bgcolor">
+            <p><b>Background Color :</b><br><span id="demo">lightseagreen</span></p>
+        </div>
+        <div id="btn">
+            <button onclick="changeColor()">Change Color</button>
+        </div>
+    </main>
+</body>
+</html>

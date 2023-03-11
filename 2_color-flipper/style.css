@@ -1,0 +1,98 @@
+:root {
+    --color: lightseagreen;
+    --grey: rgb(50, 50, 50);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:'Lucida Sans', sans-serif;
+    background-color: var(--color);
+    height: 100vh;
+    display: flex;
+}
+
+#nav-bar {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    height: 50px;
+    box-shadow: .5px .5px 10px var(--grey);
+}
+#nav-bar > p {
+    color: var(--color);
+}
+
+#types {
+    display: flex;
+    justify-content: space-around;
+    width: 350px;
+}
+#types > p {
+    color: var(--grey);
+    cursor: pointer;
+}
+#types > p:hover {
+    color: var(--color);
+}
+
+#color-changer {
+    width: 400px;
+    height: 150px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#bgcolor {
+    background-color: var(--grey);
+    width: 90%;
+    padding: 5%;
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+#bgcolor > p {
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    line-height: 1.5em;
+}
+#demo {
+    color: var(--color);
+}
+
+#btn > button {
+    display: block;
+    background-color: transparent;
+    margin: auto;
+    padding: 10px;
+    border: 2px solid var(--grey);
+    border-radius: 10px;
+    color: var(--grey);
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: color 500ms, background-color 500ms;
+}
+#btn > button:hover {
+    color: white;
+    background-color: var(--grey);
+}
+
+@media screen and (min-width: 600px) {
+    #color-changer {
+        width: 500px;
+    }
+    #bgcolor > p {
+        font-size: 2.5em;
+    }
+    #btn > button {
+        font-size: 1.5em;
+    }
+}

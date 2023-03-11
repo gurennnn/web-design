@@ -1,0 +1,125 @@
+:root {
+    --bg-clr: rgb(240, 242, 244);
+    --title-clr: rgb(14, 40, 66);
+    --style-clr: goldenrod; 
+    --txt-clr : rgb(81, 115, 160);
+}
+
+body {
+    background-color: var(--bg-clr);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    width: 470px;
+    margin: 75px auto;
+    text-align: center;
+}
+header > h1 {
+    color: var(--title-clr);
+    font-size: 2.1em;
+    letter-spacing: 0.1em;
+}
+header > div:nth-child(2) {
+    background-color: var(--style-clr);
+    width: 100px;
+    height: 5px;
+    margin: 0px auto 30px auto;
+}
+header ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+header li {
+    list-style: none;
+}
+header button {
+    display: block;
+    background-color: transparent;
+    padding: 5px 10px;
+    border-color: var(--style-clr);
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--style-clr);
+    font-size: 1.1em;
+    letter-spacing: 0.1em;
+    transition: color 500ms, background-color 500ms;
+}
+header button:hover {
+    color: white;
+    background-color: var(--style-clr);
+}
+
+.all > div {
+    width: 400px;
+    margin: 0 auto 50px auto;
+}
+
+img {
+    display: block;
+    box-sizing: border-box;
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+    border: 3px solid var(--style-clr);
+    border-radius: 5px;
+}
+
+.title {
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: 0.2em;
+    border-bottom: 1px dotted var(--title-clr);
+}
+.title > p:first-child {
+    color: var(--title-clr);
+}
+.title > p:last-child {
+    color: var(--style-clr);
+}
+
+.description {
+    color: var(--txt-clr);
+}
+
+@media screen and (min-width: 760px) {
+    header > h1 {
+        font-size: 2.5em;
+    }
+    .all > div {
+        width: 700px;
+        display: flex;
+        justify-content:space-around;
+        align-items: flex-start;
+    }
+    img {
+        width: 250px;
+    }
+    .infos {
+        width: 400px;
+        position: relative;
+        bottom: 20px;
+        font-size: 1.1em;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .all > div {
+        max-width: 600px;
+        margin: 0 0 50px 0;
+    }
+    img {
+        width: 200px;
+    }
+    .infos {
+        max-width: 350px;
+    }
+    main {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}

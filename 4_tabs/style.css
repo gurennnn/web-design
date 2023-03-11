@@ -1,0 +1,128 @@
+:root {
+    --bg-color: rgb(237, 241, 245);
+    --title-color: rgb(31, 44, 63);
+    --text-color: rgb(91, 114, 148);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    margin: 50px 0;
+    text-align: center;
+}
+header > h1 {
+    color: var(--title-color);
+    font-size: 2.5em;
+    letter-spacing: .1em;
+}
+header > p {
+    color: var(--text-color);
+    padding: 0 20px;
+}
+
+#image {
+    display: block;
+    width: 95%;
+    height: 350px;
+    margin: 50px auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#content {
+    width: 95%;
+    margin: auto;
+}
+
+#buttons {
+    height: 50px;
+}
+#buttons ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100%;
+}
+#buttons li {
+    list-style: none;
+    width: 100%;
+}
+#buttons button {
+    display: block;
+    background-color:rgba(215, 219, 230, 0.8);
+    width: 100%;
+    height: 100%;
+    border: none;
+    cursor: pointer;
+    color: var(--title-color);
+    font-size: 1em;
+    letter-spacing: 0.2em;
+    transition : opacity 500ms, color 500ms;
+}
+#buttons li:first-child > button {
+    background-color: white;
+    border-top-left-radius: 10px;
+}
+#buttons li:last-child > button {
+    border-top-right-radius: 10px;
+}
+#buttons button:hover {
+    opacity: .7;
+    color: var(--text-color);
+}
+
+.article {
+    background-color: white;
+    padding: 30px 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.article > p:first-child {
+    color: var(--title-color);
+    font-size: 1.2em;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+}
+.article > p:nth-child(2) {
+    color: var(--text-color);
+}
+
+#vision {
+    display: none;
+}
+#vision > ul {
+    margin: 20px 0;
+    padding: 0;
+}
+#vision li {
+    list-style: none;
+}
+
+#goals {
+    display: none;
+}
+
+@media screen and (min-width: 970px) {
+    main {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+    #image {
+        max-width: 600px;
+        margin: 0;
+    }
+    #content {
+        max-width : 600px;
+        margin: 0;
+    }
+}

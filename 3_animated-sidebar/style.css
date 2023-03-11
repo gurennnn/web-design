@@ -1,0 +1,130 @@
+:root {
+    --color1: rgba(23, 38, 70, 1) ;
+    --color2: rgba(1, 196, 255, 1);
+    --color3: rgba(33, 122, 145, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(240, 243, 247);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#container {
+    position: relative;
+}
+#sidebar {
+    background-color: white;
+    width: 400px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    left: -400px;
+}
+
+#title {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#title > h1 {
+    color: var(--color1);
+    text-shadow: -1px 3px 3px rgb(189, 189, 189);
+    letter-spacing: .1em;
+}
+#title span {
+    color: var(--color2);
+}
+#hide {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 2em;
+    color: rgb(199, 0, 0);
+    transition: opacity 500ms, transform 500ms;
+}
+#hide:hover {
+    opacity: 0.5;
+    transform: rotateZ(360deg);
+}
+
+#links {
+    margin-top: 30px;
+}
+#links a {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 20px;
+    line-height: 3em;
+    font-size: 1.5em;
+    color: var(--color3);
+    transition: background-color 500ms, padding-left 500ms;
+}
+#links a:hover {
+    background-color: var(--color2);
+    padding-left: 30px;
+}
+
+#profiles {
+    padding: 20px;
+}
+#profiles > ul {
+    display: flex;
+    justify-content: center;
+}
+#profiles a {
+    display: block;
+    margin: 20px;
+    color: var(--color2);
+    transition: opacity 500ms, transform 500ms; 
+}
+#profiles a:hover {
+    opacity: 0.5;
+    transform: translateY(-5px);
+}
+li {
+    list-style-type: none;
+}
+li > a {
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+#menu-btn {
+    margin: 30px;
+}
+#show {
+    background-color: transparent;
+    color: var(--color2);
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    animation: cling 1.5s infinite normal linear none;
+    transition: opacity 500ms;
+}
+#show:hover {
+    opacity: 0.5;
+}
+
+@keyframes cling {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
